@@ -15,7 +15,7 @@ function App() {
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
     if (numberAllowed) str += "0123456789";
-    if (charAllowed) str += "!@#$%&";
+    if (charAllowed) str += "!@#$%&+=";
 
     for (let i = 1; i < length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
@@ -41,8 +41,10 @@ function App() {
 
   return (
     <>
-      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-500 bg-gray-600">
-        <h1 className="text-center my-5">password generator</h1>
+      <div className="w-full max-w-md mx-auto shadow-md flex flex-col items-center rounded-lg px-4 my-8 text-orange-500 bg-gray-600">
+        <h1 className="text-center my-5 text-2xl text-orange-400">
+          Password Generator
+        </h1>
         <div className="flex rounded-lg overflow-hidden py-4 px-3  bg-gray-600">
           <input
             className="outline-none w-full py-1 px-3 rounded-l-lg"
@@ -60,7 +62,7 @@ function App() {
             copy
           </button>
         </div>
-        <div className="flex text-sm justify-center gap-x-2 p-6">
+        <div className="flex text-sm bg-slate-50/5 justify-between min-w-full rounded-t-lg p-6">
           <div className="flex items-center gap-x-1">
             <input
               className="cursor-pointer"
@@ -69,7 +71,6 @@ function App() {
               max={12}
               value={length}
               id="lengthRange"
-              // id="lengthRange"
               onChange={(e) => {
                 {
                   setLength(e.target.value);
