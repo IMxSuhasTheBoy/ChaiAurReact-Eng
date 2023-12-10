@@ -17,7 +17,7 @@ function App() {
     if (numberAllowed) str += "0123456789";
     if (charAllowed) str += "!@#$%&+=";
 
-    for (let i = 1; i < length; i++) {
+    for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
       // console.log(char);
 
@@ -42,7 +42,7 @@ function App() {
   return (
     <>
       <div className="w-full max-w-md mx-auto shadow-md flex flex-col items-center rounded-lg px-4 my-8 text-orange-500 bg-gray-600">
-        <h1 className="text-center my-5 text-2xl text-orange-400">
+        <h1 className="text-center my-5 text-2xl text-orange-400 font-semibold tracking-wider">
           Password Generator
         </h1>
         <div className="flex rounded-lg overflow-hidden py-4 px-3  bg-gray-600">
@@ -81,6 +81,7 @@ function App() {
           </div>
           <div className="flex items-center gap-x-1">
             <input
+              className="cursor-pointer"
               type="checkbox"
               defaultChecked={numberAllowed}
               id="numberInput"
@@ -88,10 +89,13 @@ function App() {
                 setNumberAllowed((prevVal) => !prevVal);
               }}
             />
-            <label htmlFor="numberInput">Numbers</label>
+            <label className="cursor-pointer" htmlFor="numberInput">
+              Numbers
+            </label>
           </div>
           <div className="flex items-center gap-x-1">
             <input
+              className="cursor-pointer"
               type="checkbox"
               defaultChecked={charAllowed}
               id="characterInput"
@@ -99,7 +103,9 @@ function App() {
                 setCharAllowed((prevVal) => !prevVal);
               }}
             />
-            <label htmlFor="characterInput">Characters</label>
+            <label className="cursor-pointer" htmlFor="characterInput">
+              Characters
+            </label>
           </div>
         </div>
       </div>
