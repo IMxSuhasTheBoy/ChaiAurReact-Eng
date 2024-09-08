@@ -1,10 +1,11 @@
-import TestComponent from "./TestComponent";
+import "./App.css";
+import TestComp from "./TestComp";
 
 function App() {
   return (
     <>
-      <h1>classic CRA</h1>
-      <TestComponent />
+      <h1>01basicreact classic CRA</h1>
+      <TestComp />
     </>
   );
 }
