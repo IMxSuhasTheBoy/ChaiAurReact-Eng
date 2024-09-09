@@ -23,7 +23,19 @@ function App() {
   const [count, setCount] = useState(0);
 
   const addValue = () => {
+    /*
     setCount(count + 1);
+    setCount(count + 1);
+    setCount(count + 1);
+
+    thats how the baching happpens that react does intentionally to improve the performance
+    */
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
+    setCount((prevCount) => prevCount + 1);
+    // now the updation of count is dependent on the previous value of count, so it does
+    // getting the updated value of count for the cb on every call of setCount
+    // we avoided the baching by using the prevCount
   };
 
   const removeValue = () => {
