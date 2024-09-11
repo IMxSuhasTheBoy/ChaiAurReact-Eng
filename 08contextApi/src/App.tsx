@@ -1,15 +1,12 @@
-import { useState } from "react";
 import "./App.css";
-import UserContextProvider from "./context/UserContextProvider";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
+import UserContextProvider from "./context/UserContextProvider";
 
+// 3 - Wrap the components (children) that need access to the context in the provider. (UserContextProvider)
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <UserContextProvider>
-      <h1>React Context API pratice</h1>
       <Login />
       <Profile />
     </UserContextProvider>
