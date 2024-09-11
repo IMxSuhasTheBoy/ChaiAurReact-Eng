@@ -1,9 +1,6 @@
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
-
 export default function Contact() {
   return (
-    <div className="relative flex items-top justify-center min-h-[700px] bg-white sm:items-center sm:pt-0">
+    <div className="relative flex items-top justify-center min-h-[700px] bg-black sm:items-center sm:pt-0">
       <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
         <div className="mt-8 overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2">
@@ -90,7 +87,7 @@ export default function Contact() {
 
             <form className="p-6 flex flex-col justify-center">
               <div className="flex flex-col">
-                <label for="name" className="hidden">
+                <label htmlFor="name" className="hidden">
                   Full Name
                 </label>
                 <input
@@ -103,7 +100,7 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col mt-2">
-                <label for="email" className="hidden">
+                <label htmlFor="email" className="hidden">
                   Email
                 </label>
                 <input
@@ -116,7 +113,7 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col mt-2">
-                <label for="tel" className="hidden">
+                <label htmlFor="tel" className="hidden">
                   Number
                 </label>
                 <input
